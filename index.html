@@ -1,771 +1,577 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#123b2d">
-<meta name="description" content="Bukhari Stationary & Printing — stationery, school supplies, office essentials, photocopy, printing and custom print services in DHA Karachi.">
-<title>Bukhari Stationary & Printing | DHA Karachi</title>
-
-<style>
-:root {
-  --green: #123b2d;
-  --green2: #1c5942;
-  --cream: #f7f4eb;
-  --gold: #d9b76c;
-  --ink: #18231d;
-  --muted: #6c756e;
-  --white: #fff;
-  --border: #e5e4da;
+<meta name="theme-color" content="#111111">
+<meta name="description" content="Khan Tyre DHA Karachi — tyres, tyre fitting, puncture repair, wheel balancing and tyre services. Call or WhatsApp for prices.">
+<title>Khan Tyre DHA | Tyres & Wheel Services Karachi</title><style>
+:root{
+  --yellow:#ffc928;
+  --black:#101010;
+  --panel:#191919;
+  --muted:#a7a7a7;
+  --white:#ffffff;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--cream);
-  color: var(--ink);
-  line-height: 1.6;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--black);
+  color:var(--white);
+  line-height:1.6;
 }
-a { color: inherit; text-decoration: none; }
-button, input, select, textarea { font: inherit; }
-button, .btn { cursor: pointer; }
-.container { width: min(1160px, 92%); margin: auto; }
-
-.topbar {
-  background: #0b291f;
-  color: #fff;
-  padding: 9px 0;
-  font-size: 12px;
-  text-align: center;
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{
+  background:var(--yellow);
+  color:#111;
+  text-align:center;
+  padding:8px 12px;
+  font-size:13px;
+  font-weight:bold;
 }
-.topbar strong { color: var(--gold); }
-
-header {
-  background: rgba(247,244,235,.96);
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(12px);
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(16,16,16,.96);
+  border-bottom:1px solid #303030;
+  backdrop-filter:blur(12px);
 }
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  min-height: 78px;
+.nav{
+  min-height:76px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
 }
-.brand { display: flex; align-items: center; gap: 12px; }
-.logo {
-  width: 47px;
-  height: 47px;
-  background: var(--green);
-  color: var(--gold);
-  display: grid;
-  place-items: center;
-  border-radius: 14px 4px 14px 4px;
-  font-weight: 900;
-  font-size: 23px;
+.logo{display:flex;align-items:center;gap:11px;font-weight:900;font-size:20px}
+.logo-icon{
+  width:43px;height:43px;border-radius:50%;
+  border:4px solid var(--yellow);
+  display:grid;place-items:center;
+  font-size:21px;
 }
-.brand-name { font-weight: 800; font-size: 16px; line-height: 1.25; }
-.brand-name small {
-  display: block;
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--green2);
-  margin-top: 4px;
+.logo small{display:block;color:var(--yellow);font-size:10px;letter-spacing:2px}
+.nav-links{display:flex;align-items:center;gap:23px;font-size:13px;color:#ddd}
+.nav-links a:hover{color:var(--yellow)}
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  border:0;
+  border-radius:5px;
+  padding:13px 19px;
+  font-weight:800;
+  font-size:13px;
+  cursor:pointer;
+  transition:.2s;
 }
-.navlinks { display: flex; align-items: center; gap: 23px; font-size: 13px; font-weight: 700; }
-.navlinks a:hover { color: var(--green2); }
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 17px;
-  border-radius: 5px;
-  border: 1px solid transparent;
-  font-size: 13px;
-  font-weight: 800;
-  transition: .2s ease;
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn-yellow{background:var(--yellow);color:#111}
+.btn-outline{border:1px solid #555;background:transparent;color:white}
+.btn-whatsapp{background:#20c76a;color:#07170d}
+.menu-btn{
+  display:none;background:none;border:1px solid #444;color:white;
+  padding:8px 12px;border-radius:5px;font-size:20px;
 }
-.btn-dark { background: var(--green); color: #fff; }
-.btn-dark:hover { background: var(--green2); transform: translateY(-2px); }
-.btn-gold { background: var(--gold); color: #18231d; }
-.btn-outline { border-color: var(--green); color: var(--green); background: transparent; }
-.btn-outline:hover { background: var(--green); color: #fff; }
-.menu-toggle {
-  display: none;
-  border: 1px solid var(--border);
-  background: transparent;
-  border-radius: 5px;
-  padding: 8px 12px;
-  font-size: 20px;
+.hero{
+  position:relative;
+  min-height:640px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.77) 48%,rgba(0,0,0,.2) 100%),
+    url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=2000&q=85") center/cover;
 }
-
-.hero { padding: 68px 0 76px; overflow: hidden; }
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.02fr .98fr;
-  align-items: center;
-  gap: 52px;
+.hero-content{position:relative;z-index:1;max-width:690px;padding:85px 0}
+.eyebrow{
+  display:inline-block;color:var(--yellow);font-weight:900;
+  letter-spacing:3px;font-size:12px;margin-bottom:18px;
 }
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  color: var(--green2);
-  font-weight: 800;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 19px;
+.hero h1{font-size:clamp(40px,7vw,76px);line-height:1.04;letter-spacing:-2px;margin-bottom:22px}
+.hero h1 span{color:var(--yellow)}
+.hero p{color:#d0d0d0;font-size:16px;max-width:540px;margin-bottom:28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:20px;margin-top:35px;color:#ddd;font-size:12px}
+.hero-badges span::before{content:"✓";color:var(--yellow);font-weight:bold;margin-right:8px}
+.section{padding:82px 0}
+.section-dark{background:#151515}
+.section-head{margin-bottom:36px}
+.section-head.center{text-align:center}
+.section-head .eyebrow{margin-bottom:10px}
+.section-head h2{font-size:clamp(29px,4vw,43px);line-height:1.15;margin-bottom:12px}
+.section-head p{color:var(--muted);max-width:650px}
+.section-head.center p{margin:auto}
+.stats{
+  background:var(--yellow);color:#111;padding:26px 0;
 }
-.eyebrow:before { content: ""; width: 25px; height: 2px; background: var(--gold); }
-h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(42px, 5.4vw, 72px);
-  line-height: 1.03;
-  letter-spacing: -2px;
-  color: var(--green);
-  margin-bottom: 22px;
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.stat strong{display:block;font-size:19px}
+.stat span{font-size:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:var(--panel);border:1px solid #303030;border-radius:9px;
+  overflow:hidden;transition:.25s;
 }
-h1 em { color: #b38a3d; font-weight: 400; }
-.hero p { color: var(--muted); max-width: 490px; font-size: 15px; margin-bottom: 25px; }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero-note { margin-top: 27px; display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 12px; }
-.status-dot { width: 9px; height: 9px; border-radius: 50%; background: #31925f; display: inline-block; }
-
-.hero-visual { position: relative; min-height: 440px; }
-.hero-image {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  border-radius: 160px 8px 8px 8px;
-  box-shadow: 18px 18px 0 #e6ddc6;
+.card:hover{transform:translateY(-5px);border-color:#8b7020}
+.card-image{height:205px;overflow:hidden;background:#222}
+.card-image img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.card:hover .card-image img{transform:scale(1.05)}
+.card-body{padding:23px}
+.card-icon{font-size:26px;margin-bottom:12px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:13px;margin-bottom:15px}
+.text-link{color:var(--yellow);font-size:13px;font-weight:bold}
+.brand-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.brand{
+  padding:23px 12px;border:1px solid #333;background:#191919;border-radius:7px;
+  text-align:center;font-size:16px;font-weight:900;letter-spacing:1px;
 }
-.floating-card {
-  position: absolute;
-  bottom: 22px;
-  left: -25px;
-  background: #fff;
-  padding: 18px 20px;
-  border-left: 4px solid var(--gold);
-  box-shadow: 0 12px 40px #142b1b20;
-  max-width: 230px;
+.brand span{display:block;font-size:10px;font-weight:normal;color:var(--muted);letter-spacing:0;margin-top:4px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about-image{height:420px;border-radius:10px;overflow:hidden;position:relative}
+.about-image img{width:100%;height:100%;object-fit:cover}
+.about-image::after{content:"";position:absolute;inset:0;border:1px solid #ffffff20;border-radius:10px}
+.about-copy h2{font-size:clamp(30px,4vw,42px);line-height:1.15;margin-bottom:18px}
+.about-copy p{color:var(--muted);margin-bottom:16px}
+.check-list{list-style:none;margin:22px 0}
+.check-list li{margin:11px 0;font-size:14px}
+.check-list li::before{content:"✓";color:var(--yellow);font-weight:bold;margin-right:10px}
+.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:190px 190px;gap:12px}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:7px}
+.gallery img:first-child{grid-row:span 2}
+.cta-band{
+  background:linear-gradient(100deg,#ffc928,#ffdf70);
+  color:#111;padding:42px 0;
 }
-.floating-card strong { display: block; color: var(--green); font-size: 15px; }
-.floating-card span { color: var(--muted); font-size: 12px; }
-
-.trust-strip { background: var(--green); color: white; padding: 24px 0; }
-.trust-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
-.trust-item { display: flex; gap: 12px; align-items: center; }
-.trust-icon { font-size: 24px; }
-.trust-item strong { display: block; font-size: 13px; }
-.trust-item small { color: #c5d3c9; font-size: 11px; }
-
-section { padding: 82px 0; }
-.section-head { text-align: center; max-width: 650px; margin: 0 auto 38px; }
-.section-head h2 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(31px, 4vw, 46px);
-  color: var(--green);
-  line-height: 1.15;
-  margin-bottom: 12px;
+.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:25px}
+.cta-inner h2{font-size:clamp(25px,4vw,36px);line-height:1.2}
+.cta-inner p{font-size:14px;margin-top:8px}
+.cta-inner .btn{background:#111;color:white;white-space:nowrap}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px}
+.contact-panel,.contact-form{
+  background:#191919;border:1px solid #303030;border-radius:9px;padding:28px;
 }
-.section-head p { color: var(--muted); font-size: 14px; }
-.categories { display: flex; justify-content: center; gap: 9px; flex-wrap: wrap; margin-bottom: 30px; }
-.filter-btn {
-  border: 1px solid var(--border);
-  border-radius: 30px;
-  background: #fff;
-  padding: 9px 16px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--ink);
+.contact-panel h3,.contact-form h3{font-size:22px;margin-bottom:18px}
+.contact-item{padding:16px 0;border-bottom:1px solid #303030}
+.contact-item:last-child{border:0}
+.contact-item strong{display:block;color:var(--yellow);font-size:12px;margin-bottom:5px;letter-spacing:1px}
+.contact-item p,.contact-item a{font-size:14px;color:#ddd;overflow-wrap:anywhere}
+.contact-item a:hover{color:var(--yellow)}
+.form-group{margin-bottom:15px}
+.form-group label{display:block;font-size:12px;color:#ddd;margin-bottom:7px}
+.form-group input,.form-group textarea,.form-group select{
+  width:100%;padding:13px;border-radius:5px;border:1px solid #393939;
+  background:#101010;color:white;outline:none;
 }
-.filter-btn.active, .filter-btn:hover { background: var(--green); color: #fff; border-color: var(--green); }
-
-.product-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
-.product-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 7px;
-  overflow: hidden;
-  transition: .25s ease;
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--yellow)}
+.form-group textarea{min-height:100px;resize:vertical}
+.form-note{color:#999;font-size:11px;margin-top:10px}
+.map-frame{width:100%;height:330px;border:0;filter:grayscale(1) invert(.9) contrast(.85)}
+.map-caption{padding:16px 0;color:var(--muted);font-size:13px}
+footer{background:#090909;border-top:1px solid #292929;padding:30px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.footer-inner p{font-size:12px;color:#999}
+.footer-links{display:flex;flex-wrap:wrap;gap:17px;font-size:12px;color:#ccc}
+.footer-links a:hover{color:var(--yellow)}
+.float-wa{
+  position:fixed;right:18px;bottom:18px;z-index:999;
+  width:57px;height:57px;border-radius:50%;
+  display:grid;place-items:center;background:#20c76a;color:#07170d;
+  font-size:26px;box-shadow:0 6px 25px #0009;
 }
-.product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px #102b1b12; }
-.product-image { width: 100%; height: 220px; object-fit: cover; display: block; background: #e8e5d9; }
-.product-body { padding: 20px; }
-.product-tag {
-  color: #9b7733;
-  font-size: 10px;
-  letter-spacing: 1.4px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-.product-body h3 { color: var(--green); font-size: 19px; margin: 7px 0; }
-.product-body p { color: var(--muted); font-size: 13px; min-height: 42px; margin-bottom: 17px; }
-.product-body .btn { width: 100%; }
-
-.services { background: #eeece2; }
-.service-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-.service-card { background: #fff; padding: 26px; border: 1px solid var(--border); border-radius: 6px; }
-.service-icon {
-  width: 52px; height: 52px; display: grid; place-items: center;
-  background: #e9eee6; color: var(--green); border-radius: 12px; font-size: 25px; margin-bottom: 17px;
-}
-.service-card h3 { color: var(--green); margin-bottom: 8px; font-size: 18px; }
-.service-card p { color: var(--muted); font-size: 13px; margin-bottom: 17px; }
-
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
-.about-image { width: 100%; height: 390px; object-fit: cover; border-radius: 6px 100px 6px 6px; }
-.about-copy h2 { font-family: Georgia,serif; color: var(--green); font-size: 42px; line-height: 1.15; margin-bottom: 18px; }
-.about-copy p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
-.check-list { list-style: none; margin: 22px 0; }
-.check-list li { margin: 11px 0; font-size: 13px; font-weight: 700; }
-.check-list li:before { content: "✓"; color: #ad8539; font-weight: 900; margin-right: 10px; }
-
-.contact { background: var(--green); color: #fff; }
-.contact .section-head h2 { color: #fff; }
-.contact .section-head p { color: #c4d0c7; }
-.contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 35px; align-items: start; }
-.contact-info { display: grid; gap: 13px; }
-.contact-line { display: flex; align-items: flex-start; gap: 13px; padding: 17px; border: 1px solid #ffffff24; border-radius: 6px; }
-.contact-icon { font-size: 21px; }
-.contact-line small { display: block; color: #c3d1c6; font-size: 10px; letter-spacing: 1.5px; margin-bottom: 4px; }
-.contact-line strong { font-size: 13px; font-weight: 700; overflow-wrap: anywhere; }
-.contact-line a:hover { color: var(--gold); }
-
-.form-card { background: #fff; color: var(--ink); border-radius: 7px; padding: 28px; }
-.form-card h3 { color: var(--green); font-family: Georgia,serif; font-size: 27px; margin-bottom: 6px; }
-.form-card > p { color: var(--muted); font-size: 12px; margin-bottom: 22px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.field { margin-bottom: 14px; }
-.field label { display: block; font-size: 11px; font-weight: 800; margin-bottom: 6px; }
-.field input, .field select, .field textarea {
-  width: 100%; border: 1px solid var(--border); border-radius: 4px; padding: 12px; outline: none; background: #fcfcf9; font-size: 13px;
-}
-.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--green2); }
-.field textarea { min-height: 90px; resize: vertical; }
-.form-card .btn { width: 100%; border: 0; }
-
-.faq-list { max-width: 780px; margin: auto; }
-.faq-item { border-bottom: 1px solid var(--border); }
-.faq-question { display: flex; justify-content: space-between; gap: 20px; padding: 19px 0; cursor: pointer; font-weight: 800; color: var(--green); }
-.faq-answer { display: none; color: var(--muted); font-size: 13px; padding: 0 0 18px; }
-.faq-item.open .faq-answer { display: block; }
-.faq-item.open .faq-question span { transform: rotate(45deg); }
-
-footer { background: #0b291f; color: white; padding: 30px 0; }
-.footer-inner { display: flex; justify-content: space-between; gap: 20px; align-items: center; flex-wrap: wrap; }
-footer p, footer small { color: #bdccc1; font-size: 12px; }
-.footer-links { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; }
-.footer-links a:hover { color: var(--gold); }
-
-.whatsapp-float {
-  position: fixed; right: 18px; bottom: 18px; z-index: 30;
-  background: #20bf67; color: #fff; padding: 13px 17px; border-radius: 40px;
-  box-shadow: 0 8px 25px #0003; font-weight: 800; font-size: 13px;
-}
-.whatsapp-float:hover { background: #169e53; }
-
-@media(max-width: 850px) {
-  .navlinks {
-    display: none; position: absolute; top: 78px; left: 0; right: 0;
-    background: var(--cream); padding: 22px 5%; border-bottom: 1px solid var(--border);
-    flex-direction: column; align-items: stretch; gap: 17px;
+@media(max-width:850px){
+  .nav-links{
+    display:none;position:absolute;top:76px;left:0;right:0;
+    padding:20px 5%;background:#111;border-bottom:1px solid #333;
+    flex-direction:column;align-items:stretch;gap:18px;
   }
-  .navlinks.show { display: flex; }
-  .menu-toggle { display: block; }
-  .nav-cta { display: none; }
-  .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-  .hero { padding-top: 45px; }
-  .hero-visual { min-height: 350px; }
-  .hero-image { height: 340px; }
-  .floating-card { left: 8px; bottom: 5px; }
-  .trust-grid { grid-template-columns: repeat(2,1fr); }
-  .product-grid, .service-grid { grid-template-columns: repeat(2,1fr); }
-  .about-image { height: 320px; }
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  .nav>.btn{display:none}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .about-grid{gap:25px}
+  .brand-grid{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width: 540px) {
-  section { padding: 60px 0; }
-  .product-grid, .service-grid { grid-template-columns: 1fr; }
-  .product-image { height: 235px; }
-  .trust-grid { grid-template-columns: 1fr 1fr; gap: 22px 12px; }
-  .trust-item { align-items: flex-start; }
-  .trust-icon { font-size: 20px; }
-  .trust-item strong { font-size: 12px; }
-  .trust-item small { font-size: 10px; }
-  .form-row { grid-template-columns: 1fr; gap: 0; }
-  .hero h1 { letter-spacing: -1px; }
-  .hero-visual { min-height: 300px; }
-  .hero-image { height: 290px; border-top-left-radius: 100px; }
-  .about-copy h2 { font-size: 34px; }
-  .form-card { padding: 21px; }
-  .whatsapp-float { right: 12px; bottom: 12px; }
+@media(max-width:600px){
+  .hero{min-height:600px;background-position:60% center}
+  .hero-content{padding:65px 0}
+  .hero h1{letter-spacing:-1px}
+  .hero p{font-size:14px}
+  .section{padding:60px 0}
+  .stats-grid{grid-template-columns:1fr;gap:17px}
+  .cards{grid-template-columns:1fr}
+  .card-image{height:220px}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .about-image{height:290px;order:2}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:160px 160px 160px}
+  .gallery img:first-child{grid-row:auto;grid-column:span 2}
+  .cta-inner{align-items:flex-start;flex-direction:column}
+  .footer-inner{align-items:flex-start;flex-direction:column}
+  .contact-panel,.contact-form{padding:21px}
+  .brand{font-size:14px}
 }
-</style>
-</head>
-
-<body>
-
-<div class="topbar">
-  <strong>BUKHARI STATIONARY & PRINTING</strong>
-  &nbsp;·&nbsp; DHA Phase 6, Karachi
-  &nbsp;·&nbsp; Open daily 10 AM – 10 PM
-</div>
-
-<header>
+</style></head><body><div class="topbar">
+  KHAN TYRE DHA · KARACHI &nbsp; | &nbsp; Call / WhatsApp: 0327-2091557
+</div><header>
   <div class="container nav">
-    <a href="#home" class="brand">
-      <div class="logo">B.</div>
-      <div class="brand-name">
-        Bukhari Stationary
-        <small>& PRINTING</small>
-      </div>
-    </a>
+    <a href="#home" class="logo" aria-label="Khan Tyre DHA Home">
+      <span class="logo-icon">K</span>
+      <span>KHAN TYRE<small>DHA · KARACHI</small></span>
+    </a><nav class="nav-links" id="navLinks">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#brands">Tyre Brands</a>
+  <a href="#about">About Us</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    <nav class="navlinks" id="navlinks">
-      <a href="#home">Home</a>
-      <a href="#products">Stationery</a>
-      <a href="#services">Printing Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<a class="btn btn-yellow" href="https://wa.me/923272091557?text=Assalam-o-Alaikum%2C%20mujhe%20tyres%20ki%20price%20maloom%20karni%20hai." target="_blank" rel="noopener">Ask Price ↗</a>
+<button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">☰</button>
 
-    <a class="btn btn-dark nav-cta" href="#products">Explore Products ↗</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
   </div>
-</header>
-
-<main>
+</header><main>
 <section class="hero" id="home">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow">Your local stationery destination</div>
-      <h1>Everything you need.<br><em>All in one place.</em></h1>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">YOUR TYRE & WHEEL SERVICE DESTINATION</span>
+      <h1>THE RIGHT TYRES.<br><span>THE RIGHT DRIVE.</span></h1>
       <p>
-        From everyday stationery and school essentials to printing and photocopy
-        services, Bukhari Stationary & Printing is here to help you get things done.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-dark" href="#products">Explore Stationery ↗</a>
-        <a class="btn btn-outline" href="#services">Our Services</a>
-      </div>
-      <div class="hero-note">
-        <span class="status-dot"></span>
-        <span>Visit us in Bara Bukhari Commercial Area, DHA Phase 6, Karachi.</span>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <img class="hero-image"
-        src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1100&q=85"
-        alt="Writing tools and stationery on a desk"
-        onerror="this.style.background='#d8dfd1';this.removeAttribute('src');">
-      <div class="floating-card">
-        <strong>Stationery · Printing · More</strong>
-        <span>Everyday essentials for school, office and business.</span>
-      </div>
-    </div>
+        Welcome to Khan Tyre DHA, Karachi. Explore tyre options and tyre-related
+        services for your vehicle. Contact us for current prices and availability.
+      </p>  <div class="hero-actions">
+    <a class="btn btn-yellow" href="https://wa.me/923272091557?text=Assalam-o-Alaikum%2C%20Khan%20Tyre%20DHA%20se%20tyres%20ki%20price%20poochni%20hai." target="_blank" rel="noopener">💬 Ask Price on WhatsApp</a>
+    <a class="btn btn-outline" href="tel:+923272091557">☎ Call Now</a>
   </div>
-</section>
 
-<div class="trust-strip">
-  <div class="container trust-grid">
-    <div class="trust-item"><span class="trust-icon">✏️</span><div><strong>School Supplies</strong><small>Everyday essentials</small></div></div>
-    <div class="trust-item"><span class="trust-icon">📚</span><div><strong>Office Stationery</strong><small>Workplace basics</small></div></div>
-    <div class="trust-item"><span class="trust-icon">🖨️</span><div><strong>Printing Services</strong><small>Ask us about your job</small></div></div>
-    <div class="trust-item"><span class="trust-icon">💬</span><div><strong>WhatsApp Enquiries</strong><small>Ask for current prices</small></div></div>
+  <div class="hero-badges">
+    <span>Personal Assistance</span>
+    <span>Tyre Solutions</span>
+    <span>DHA Karachi</span>
   </div>
 </div>
 
-<section id="products">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Browse our range</div>
-      <h2>Stationery for every idea.</h2>
-      <p>Looking for a product? Ask us for its current price and availability directly on WhatsApp.</p>
-    </div>
-
-    <div class="categories">
-      <button class="filter-btn active" data-filter="all">All Products</button>
-      <button class="filter-btn" data-filter="school">School</button>
-      <button class="filter-btn" data-filter="writing">Writing</button>
-      <button class="filter-btn" data-filter="office">Office</button>
-      <button class="filter-btn" data-filter="art">Art & Craft</button>
-    </div>
-
-    <div class="product-grid">
-      <article class="product-card" data-category="school">
-        <img class="product-image" src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=700&q=80" alt="Notebooks and paper" loading="lazy">
-        <div class="product-body">
-          <span class="product-tag">School essentials</span>
-          <h3>Notebooks & Registers</h3>
-          <p>Notebooks, registers and everyday paper supplies for students.</p>
-          <button class="btn btn-dark order-product" data-product="Notebooks & Registers">Ask Price on WhatsApp ↗</button>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="writing">
-        <img class="product-image" src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=700&q=80" alt="Pens and writing tools" loading="lazy">
-        <div class="product-body">
-          <span class="product-tag">Writing essentials</span>
-          <h3>Pens & Pencils</h3>
-          <p>Writing tools for schoolwork, office tasks and everyday notes.</p>
-          <button class="btn btn-dark order-product" data-product="Pens & Pencils">Ask Price on WhatsApp ↗</button>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="office">
-        <img class="product-image" src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=700&q=80" alt="Organized office desk" loading="lazy">
-        <div class="product-body">
-          <span class="product-tag">Office essentials</span>
-          <h3>Office Supplies</h3>
-          <p>Ask about files, folders, clips and other office stationery.</p>
-          <button class="btn btn-dark order-product" data-product="Office Supplies">Ask Price on WhatsApp ↗</button>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="art">
-        <img class="product-image" src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=80" alt="Art materials and painting supplies" loading="lazy">
-        <div class="product-body">
-          <span class="product-tag">Creativity</span>
-          <h3>Art & Craft Supplies</h3>
-          <p>Creative materials for projects, drawing, painting and crafts.</p>
-          <button class="btn btn-dark order-product" data-product="Art & Craft Supplies">Ask Price on WhatsApp ↗</button>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="school">
-        <img class="product-image" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80" alt="Study and learning supplies" loading="lazy">
-        <div class="product-body">
-          <span class="product-tag">Student supplies</span>
-          <h3>School Accessories</h3>
-          <p>Ask about the availability of everyday school accessories.</p>
-          <button class="btn btn-dark order-product" data-product="School Accessories">Ask Price on WhatsApp ↗</button>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="office">
-        <img class="product-image" src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=700&q=80" alt="Paper notebook and stationery" loading="lazy">
-        <div class="product-body">
-          <span class="product-tag">Paper products</span>
-          <h3>Paper & Notepads</h3>
-          <p>For notes, lists, planning and everyday office or school use.</p>
-          <button class="btn btn-dark order-product" data-product="Paper & Notepads">Ask Price on WhatsApp ↗</button>
-        </div>
-      </article>
-    </div>
   </div>
-</section>
-
-<section class="services" id="services">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">What we offer</div>
-      <h2>Printing & everyday services.</h2>
-      <p>Tell us what you need. Contact the shop on WhatsApp to confirm service availability, pricing and requirements.</p>
-    </div>
-
-    <div class="service-grid">
-      <article class="service-card">
-        <div class="service-icon">🖨️</div>
-        <h3>Printing</h3>
-        <p>Ask about your document or printing requirements and get a price estimate.</p>
-        <button class="btn btn-outline service-order" data-service="Printing">Enquire on WhatsApp ↗</button>
-      </article>
-      <article class="service-card">
-        <div class="service-icon">📄</div>
-        <h3>Photocopy</h3>
-        <p>Contact us to confirm photocopy availability, rates and document requirements.</p>
-        <button class="btn btn-outline service-order" data-service="Photocopy">Enquire on WhatsApp ↗</button>
-      </article>
-      <article class="service-card">
-        <div class="service-icon">📑</div>
-        <h3>Document Services</h3>
-        <p>Tell us about your document or paper-related needs before visiting.</p>
-        <button class="btn btn-outline service-order" data-service="Document Services">Enquire on WhatsApp ↗</button>
-      </article>
-    </div>
+</section><section class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><strong>TYRE OPTIONS</strong><span>Ask about available sizes and brands</span></div>
+    <div class="stat"><strong>TYRE SERVICES</strong><span>Ask us about your vehicle's needs</span></div>
+    <div class="stat"><strong>DIRECT CONTACT</strong><span>Call or WhatsApp for quick assistance</span></div>
   </div>
-</section>
+</section><section class="section" id="services">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">WHAT WE OFFER</span>
+      <h2>Tyre & Wheel Services</h2>
+      <p>Need tyres or help with your wheels? Contact Khan Tyre DHA to ask about services, prices and availability.</p>
+    </div><div class="cards">
+  <article class="card">
+    <div class="card-image">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=850&q=80" alt="Car tyre close-up" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-icon">◉</div>
+      <h3>Tyre Sales</h3>
+      <p>Ask about available tyre brands, sizes, options and current prices for your vehicle.</p>
+      <a class="text-link ask-link" href="#">ASK FOR PRICE →</a>
+    </div>
+  </article>
 
-<section id="about">
+  <article class="card">
+    <div class="card-image">
+      <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=850&q=80" alt="Automotive workshop" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-icon">⚙</div>
+      <h3>Tyre Fitting</h3>
+      <p>Contact us to confirm tyre fitting services, availability and applicable charges.</p>
+      <a class="text-link ask-link" href="#">ASK FOR PRICE →</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-image">
+      <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=850&q=80" alt="Vehicle wheel and tyre" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-icon">⟳</div>
+      <h3>Wheel Balancing</h3>
+      <p>Ask our team whether wheel balancing for your vehicle is available and what it costs.</p>
+      <a class="text-link ask-link" href="#">ASK FOR PRICE →</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-image">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=850&q=80" alt="Sports car" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-icon">🚘</div>
+      <h3>Tyres for Your Vehicle</h3>
+      <p>Tell us your car model and tyre size to enquire about suitable available options.</p>
+      <a class="text-link ask-link" href="#">CHECK AVAILABILITY →</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-image">
+      <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=850&q=80" alt="Car maintenance workshop" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-icon">🛠</div>
+      <h3>Puncture & Tyre Repair</h3>
+      <p>Contact us to ask about puncture repair and other tyre-related repair services.</p>
+      <a class="text-link ask-link" href="#">ASK ABOUT REPAIR →</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-image">
+      <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=850&q=80" alt="Car ready for the road" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-icon">✓</div>
+      <h3>Tyre Consultation</h3>
+      <p>Not sure which tyre you need? Send your vehicle details on WhatsApp and ask for guidance.</p>
+      <a class="text-link ask-link" href="#">CONTACT US →</a>
+    </div>
+  </article>
+</div>
+
+  </div>
+</section><section class="section section-dark" id="brands">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">EXPLORE YOUR OPTIONS</span>
+      <h2>Tyre Brands</h2>
+      <p>Ask us whether your preferred brand and tyre size are currently available. Brand names below are examples, not a guarantee of stock.</p>
+    </div><div class="brand-grid">
+  <div class="brand">MICHELIN<span>Ask for availability</span></div>
+  <div class="brand">BRIDGESTONE<span>Ask for availability</span></div>
+  <div class="brand">DUNLOP<span>Ask for availability</span></div>
+  <div class="brand">YOKOHAMA<span>Ask for availability</span></div>
+  <div class="brand">CONTINENTAL<span>Ask for availability</span></div>
+  <div class="brand">PIRELLI<span>Ask for availability</span></div>
+  <div class="brand">HANKOOK<span>Ask for availability</span></div>
+  <div class="brand">OTHER BRANDS<span>Contact us to enquire</span></div>
+</div>
+
+<div style="text-align:center;margin-top:28px">
+  <a class="btn btn-yellow" href="https://wa.me/923272091557?text=Assalam-o-Alaikum%2C%20mujhe%20tyre%20brands%20aur%20sizes%20ki%20availability%20maloom%20karni%20hai." target="_blank" rel="noopener">Check Brand & Price on WhatsApp</a>
+</div>
+
+  </div>
+</section><section class="section" id="about">
   <div class="container about-grid">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1100&q=85" alt="Automotive service workshop" loading="lazy">
+    </div><div class="about-copy">
+  <span class="eyebrow">ABOUT KHAN TYRE DHA</span>
+  <h2>Your Local Tyre Contact in DHA Karachi</h2>
+  <p>Khan Tyre DHA provides a convenient way for customers to enquire about tyres and tyre-related services in Karachi.</p>
+  <p>Contact us with your vehicle model, tyre size and preferred brand to ask about current prices and availability before visiting.</p>
+
+  <ul class="check-list">
+    <li>Direct phone and WhatsApp contact</li>
+    <li>Enquiries about tyre sizes and brands</li>
+    <li>Location details and map directions</li>
+    <li>Price enquiries before your visit</li>
+  </ul>
+
+  <a class="btn btn-yellow" href="https://wa.me/923272091557?text=Assalam-o-Alaikum%2C%20mujhe%20Khan%20Tyre%20DHA%20se%20maloomat%20lenay%20hai." target="_blank" rel="noopener">Contact Khan Tyre →</a>
+</div>
+
+  </div>
+</section><section class="section section-dark" id="gallery">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">AUTOMOTIVE GALLERY</span>
+      <h2>Tyres, Wheels & Cars</h2>
+      <p>Explore automotive imagery. These are illustrative stock photos, not verified photographs of the actual shop.</p>
+    </div><div class="gallery">
+  <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=80" alt="Tyre detail" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=700&q=80" alt="Automotive workshop" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=700&q=80" alt="Vehicle exterior" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80" alt="Sports car" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=700&q=80" alt="Car wheel" loading="lazy">
+</div>
+
+  </div>
+</section><section class="cta-band">
+  <div class="container cta-inner">
     <div>
-      <img class="about-image"
-        src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1000&q=85"
-        alt="Organized stationery and planning supplies" loading="lazy">
+      <h2>Need a Tyre Price?</h2>
+      <p>Send your car model, tyre size or a tyre photo directly on WhatsApp.</p>
     </div>
-    <div class="about-copy">
-      <div class="eyebrow">About our shop</div>
-      <h2>Your neighbourhood stationery stop.</h2>
-      <p>
-        Bukhari Stationary & Printing serves stationery and printing needs in
-        Bara Bukhari Commercial Area, DHA Phase 6, Karachi.
-      </p>
-      <p>
-        Whether you're looking for school supplies, office essentials or printing
-        services, contact us first to check current prices and availability.
-      </p>
-      <ul class="check-list">
-        <li>Stationery for school and office</li>
-        <li>Printing and document-related enquiries</li>
-        <li>Ask for prices directly through WhatsApp</li>
-        <li>Convenient location in DHA Phase 6, Karachi</li>
-      </ul>
-      <a class="btn btn-dark" href="#contact">Contact the Shop ↗</a>
-    </div>
+    <a class="btn" href="https://wa.me/923272091557?text=Assalam-o-Alaikum%2C%20mujhe%20tyre%20ki%20price%20maloom%20karni%20hai." target="_blank" rel="noopener">💬 Ask Price on WhatsApp ↗</a>
   </div>
-</section>
-
-<section id="contact" class="contact">
+</section><section class="section" id="contact">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow" style="color:#e3c982">Find us</div>
-      <h2>Let's help you find what you need.</h2>
-      <p>Ask about products, prices, availability or printing services on WhatsApp.</p>
+      <span class="eyebrow">GET IN TOUCH</span>
+      <h2>Contact Khan Tyre DHA</h2>
+      <p>Call us, message us on WhatsApp, or open the map for directions.</p>
+    </div><div class="contact-grid">
+  <div class="contact-panel">
+    <h3>Shop Information</h3>
+
+    <div class="contact-item">
+      <strong>📍 SHOP ADDRESS</strong>
+      <p>Plot # 24-C, Khan Tyre DHA, Shop # 2, Street 5, Badar Commercial Area, Defence V, DHA, Karachi, 75500</p>
+      <p style="margin-top:10px"><a href="https://www.google.com/maps/search/?api=1&query=Khan+Tyre+DHA+Badar+Commercial+Area+Karachi" target="_blank" rel="noopener">Open Google Maps ↗</a></p>
     </div>
 
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="contact-line">
-          <div class="contact-icon">📍</div>
-          <div>
-            <small>SHOP ADDRESS</small>
-            <strong>Plot No. 9-C, Lane #07, Bara Bukhari Commercial Area, Phase 6, Defence Housing Authority (DHA), Karachi, 75500</strong>
-          </div>
-        </div>
+    <div class="contact-item">
+      <strong>☎ PHONE NUMBER</strong>
+      <a href="tel:+923272091557">0327-2091557</a>
+    </div>
 
-        <div class="contact-line">
-          <div class="contact-icon">🕙</div>
-          <div>
-            <small>OPENING HOURS</small>
-            <strong>10:00 AM – 10:00 PM</strong>
-          </div>
-        </div>
+    <div class="contact-item">
+      <strong>💬 WHATSAPP</strong>
+      <a href="https://wa.me/923272091557" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
 
-        <div class="contact-line">
-          <div class="contact-icon">📱</div>
-          <div>
-            <small>PHONE / WHATSAPP</small>
-            <strong><a href="tel:+923063845245">0306 3845245</a></strong>
-          </div>
-        </div>
-
-        <a class="btn btn-gold"
-          href="https://www.google.com/maps/search/?api=1&query=Plot+No+9-C+Lane+07+Bara+Bukhari+Commercial+Area+Phase+6+DHA+Karachi+75500"
-          target="_blank" rel="noopener noreferrer">
-          📍 Get Directions on Google Maps ↗
-        </a>
-
-        <a class="btn" style="border:1px solid #ffffff55;color:white"
-          href="https://wa.me/923063845245?text=Assalam-o-Alaikum%20Bukhari%20Stationary%20%26%20Printing!%20I%20have%20a%20question."
-          target="_blank" rel="noopener noreferrer">
-          💬 Chat on WhatsApp
-        </a>
-      </div>
-
-      <form class="form-card" id="orderForm">
-        <h3>Ask for a Price</h3>
-        <p>Fill in your enquiry and continue to WhatsApp to send it to the shop.</p>
-
-        <div class="form-row">
-          <div class="field">
-            <label for="customerName">YOUR NAME *</label>
-            <input id="customerName" name="name" placeholder="Enter your name" required>
-          </div>
-          <div class="field">
-            <label for="customerPhone">YOUR PHONE (OPTIONAL)</label>
-            <input id="customerPhone" name="phone" type="tel" placeholder="Your contact number">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="field">
-            <label for="requestType">WHAT DO YOU NEED? *</label>
-            <select id="requestType" name="type" required>
-              <option value="">Choose a category</option>
-              <option>Stationery</option>
-              <option>School Supplies</option>
-              <option>Office Supplies</option>
-              <option>Art & Craft</option>
-              <option>Printing</option>
-              <option>Photocopy</option>
-              <option>Document Services</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="quantity">QUANTITY (OPTIONAL)</label>
-            <input id="quantity" name="quantity" placeholder="e.g. 10 notebooks">
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="details">PRODUCT / REQUIREMENTS *</label>
-          <textarea id="details" name="details" placeholder="Write the product name or explain your printing requirements..." required></textarea>
-        </div>
-
-        <button class="btn btn-dark" type="submit">Send Enquiry on WhatsApp ↗</button>
-      </form>
+    <div class="contact-item">
+      <strong>🕒 BUSINESS HOURS</strong>
+      <p>Daily: 10:00 AM – 10:00 PM</p>
+      <p style="color:#999;font-size:12px">Please contact the shop to confirm opening hours before visiting.</p>
     </div>
   </div>
-</section>
 
-<section id="faq">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Need to know</div>
-      <h2>Frequently asked questions.</h2>
-      <p>Quick answers about contacting our shop.</p>
-    </div>
+  <div class="contact-form">
+    <h3>Ask for a Tyre Price</h3>
+    <p style="font-size:13px;color:#aaa;margin-bottom:20px">Fill in your vehicle details. Your message will open in WhatsApp.</p>
 
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-question">How can I check a product's price? <span>＋</span></div>
-        <div class="faq-answer">Click the “Ask Price on WhatsApp” button under a product. WhatsApp will open with a pre-written enquiry that you can send to the shop.</div>
+    <form id="priceForm">
+      <div class="form-group">
+        <label for="customerName">Your Name</label>
+        <input id="customerName" name="name" type="text" placeholder="Enter your name" required>
       </div>
-      <div class="faq-item">
-        <div class="faq-question">Where is the shop located? <span>＋</span></div>
-        <div class="faq-answer">Plot No. 9-C, Lane #07, Bara Bukhari Commercial Area, Phase 6, DHA, Karachi, 75500. Use the Google Maps directions button in the Contact section.</div>
+
+      <div class="form-group">
+        <label for="vehicle">Car Make / Model</label>
+        <input id="vehicle" name="vehicle" type="text" placeholder="e.g. Toyota Corolla" required>
       </div>
-      <div class="faq-item">
-        <div class="faq-question">What are the opening hours? <span>＋</span></div>
-        <div class="faq-answer">The listed opening hours are 10:00 AM to 10:00 PM. Contact the shop to confirm availability before visiting.</div>
+
+      <div class="form-group">
+        <label for="tyreSize">Tyre Size (if known)</label>
+        <input id="tyreSize" name="size" type="text" placeholder="e.g. 195/65 R15">
       </div>
-      <div class="faq-item">
-        <div class="faq-question">Can I ask about printing services? <span>＋</span></div>
-        <div class="faq-answer">Yes. Use one of the service enquiry buttons or the contact form to send your requirements through WhatsApp.</div>
+
+      <div class="form-group">
+        <label for="service">What do you need?</label>
+        <select id="service" name="service">
+          <option>Tyre price</option>
+          <option>Tyre availability</option>
+          <option>Tyre fitting</option>
+          <option>Wheel balancing</option>
+          <option>Puncture / tyre repair</option>
+          <option>Other enquiry</option>
+        </select>
       </div>
-    </div>
+
+      <div class="form-group">
+        <label for="details">Additional Details</label>
+        <textarea id="details" name="details" placeholder="Preferred brand, quantity or any other details..."></textarea>
+      </div>
+
+      <button class="btn btn-whatsapp" type="submit" style="width:100%">Send Enquiry on WhatsApp ↗</button>
+      <p class="form-note">This form opens WhatsApp with your message. It does not store your information on this website.</p>
+    </form>
+  </div>
+</div>
+
+  </div>
+</section><section class="section section-dark" style="padding:0">
+  <iframe
+    class="map-frame"
+    title="Khan Tyre DHA Karachi map"
+    src="https://maps.google.com/maps?q=Khan%20Tyre%20DHA%20Badar%20Commercial%20Area%20Karachi&t=&z=14&ie=UTF8&iwloc=&output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen>
+  </iframe>
+  <div class="container map-caption">
+    Map results are based on the shop name and address search. If the pin is not exact, use Google Maps search or contact the shop for directions.
   </div>
 </section>
-</main>
-
-<footer>
+</main><footer>
   <div class="container footer-inner">
-    <div class="brand">
-      <div class="logo">B.</div>
-      <div class="brand-name" style="color:white">
-        Bukhari Stationary
-        <small style="color:#d9b76c">& PRINTING</small>
-      </div>
-    </div>
-    <p>© <span id="year"></span> Bukhari Stationary & Printing. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="#products">Products</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="https://wa.me/923063845245" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
-    </div>
-  </div>
-</footer>
+    <div>
+      <a href="#home" class="logo">
+        <span class="logo-icon">K</span>
+        <span>KHAN TYRE<small>DHA · KARACHI</small></span>
+      </a>
+      <p style="margin-top:13px">Tyres & wheel service enquiries in Karachi.</p>
+      <p style="margin-top:6px">© <span id="year"></span> Khan Tyre DHA. All rights reserved.</p>
+    </div><div class="footer-links">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#brands">Brands</a>
+  <a href="#contact">Contact</a>
+  <a href="https://wa.me/923272091557" target="_blank" rel="noopener">WhatsApp</a>
+</div>
 
-<a class="whatsapp-float"
-   href="https://wa.me/923063845245?text=Assalam-o-Alaikum%20Bukhari%20Stationary%20%26%20Printing!"
-   target="_blank" rel="noopener noreferrer" aria-label="Chat with the shop on WhatsApp">
-  ☎ WhatsApp Us
-</a>
+  </div>
+</footer><a class="float-wa" href="https://wa.me/923272091557?text=Assalam-o-Alaikum%2C%20Khan%20Tyre%20DHA%20se%20rabta%20karna%20hai." target="_blank" rel="noopener" aria-label="Contact Khan Tyre on WhatsApp">☏</a>
 
 <script>
-/* Shop WhatsApp number: Pakistan country code + number, without + or spaces */
-const SHOP_WHATSAPP = "923063845245";
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-function sendWhatsApp(message) {
-  const url = "https://wa.me/" + SHOP_WHATSAPP + "?text=" + encodeURIComponent(message);
-  window.open(url, "_blank", "noopener,noreferrer");
-}
+menuBtn.addEventListener("click", function () {
+  const isOpen = navLinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", String(isOpen));
+  menuBtn.textContent = isOpen ? "✕" : "☰";
+});
 
-/* Product-specific Ask Price on WhatsApp buttons */
-document.querySelectorAll(".order-product").forEach(button => {
-  button.addEventListener("click", () => {
-    const product = button.dataset.product;
-    const message =
-      "Assalam-o-Alaikum Bukhari Stationary & Printing!\n\n" +
-      "Mujhe is product ki price maloom karni hai:\n" +
-      "Product: " + product + "\n\n" +
-      "Please current price aur availability bata dein.\n" +
-      "Shukriya!";
-    sendWhatsApp(message);
+document.querySelectorAll("#navLinks a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.textContent = "☰";
   });
 });
 
-/* Service enquiry buttons */
-document.querySelectorAll(".service-order").forEach(button => {
-  button.addEventListener("click", () => {
-    const service = button.dataset.service;
-    const message =
-      "Assalam-o-Alaikum Bukhari Stationary & Printing!\n\n" +
-      "Mujhe aapki " + service + " service ke baare mein maloomat chahiye.\n" +
-      "Please price aur availability bata dein.\n\nShukriya!";
-    sendWhatsApp(message);
-  });
+document.querySelectorAll(".ask-link").forEach(function (link) {
+  link.href = "https://wa.me/923272091557?text=" +
+    encodeURIComponent("Assalam-o-Alaikum, mujhe Khan Tyre DHA se tyre ki price aur availability maloom karni hai.");
+  link.target = "_blank";
+  link.rel = "noopener";
 });
 
-/* Contact / price enquiry form */
-document.getElementById("orderForm").addEventListener("submit", function(event) {
+document.getElementById("priceForm").addEventListener("submit", function (event) {
   event.preventDefault();
 
   const name = document.getElementById("customerName").value.trim();
-  const phone = document.getElementById("customerPhone").value.trim();
-  const type = document.getElementById("requestType").value;
-  const quantity = document.getElementById("quantity").value.trim();
+  const vehicle = document.getElementById("vehicle").value.trim();
+  const size = document.getElementById("tyreSize").value.trim();
+  const service = document.getElementById("service").value;
   const details = document.getElementById("details").value.trim();
 
   const message =
-    "Assalam-o-Alaikum Bukhari Stationary & Printing!\n\n" +
-    "Mujhe price / availability maloom karni hai.\n\n" +
+    "Assalam-o-Alaikum, Khan Tyre DHA!\n\n" +
+    "I would like to enquire about your services.\n\n" +
     "Name: " + name + "\n" +
-    "Phone: " + (phone || "Not provided") + "\n" +
-    "Category: " + type + "\n" +
-    "Quantity: " + (quantity || "Not specified") + "\n" +
-    "Product / Requirements: " + details + "\n\n" +
-    "Please details aur price bata dein. Shukriya!";
+    "Car Model: " + vehicle + "\n" +
+    "Tyre Size: " + (size || "Not sure") + "\n" +
+    "Enquiry: " + service + "\n" +
+    "Additional Details: " + (details || "None") + "\n\n" +
+    "Please share the price and availability. Thank you.";
 
-  sendWhatsApp(message);
-});
-
-/* Product category filters */
-document.querySelectorAll(".filter-btn").forEach(button => {
-  button.addEventListener("click", () => {
-    document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
-    button.classList.add("active");
-
-    const filter = button.dataset.filter;
-    document.querySelectorAll(".product-card").forEach(card => {
-      card.style.display =
-        filter === "all" || card.dataset.category === filter ? "" : "none";
-    });
-  });
-});
-
-/* Mobile navigation */
-const menuToggle = document.getElementById("menuToggle");
-const navlinks = document.getElementById("navlinks");
-
-menuToggle.addEventListener("click", () => {
-  navlinks.classList.toggle("show");
-  menuToggle.textContent = navlinks.classList.contains("show") ? "✕" : "☰";
-});
-
-navlinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navlinks.classList.remove("show");
-    menuToggle.textContent = "☰";
-  });
-});
-
-/* FAQ accordion */
-document.querySelectorAll(".faq-question").forEach(question => {
-  question.addEventListener("click", () => {
-    question.parentElement.classList.toggle("open");
-  });
+  window.open(
+    "https://wa.me/923272091557?text=" + encodeURIComponent(message),
+    "_blank",
+    "noopener"
+  );
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-</body>
+</script></body>
 </html>
